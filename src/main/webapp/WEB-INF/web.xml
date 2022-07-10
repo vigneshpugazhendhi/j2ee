@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>LearnJEE</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>add</servlet-name>
+		<servlet-class>com.servlets.AddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>add</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>square</servlet-name>
+		<servlet-class>com.servlets.SquareServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>square</servlet-name>
+		<url-pattern>/square</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>myservlet</servlet-name>
+		<servlet-class>com.servlets.MyServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>vignesh</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>myservlet</servlet-name>
+		<url-pattern>/myservlet</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Vignesh</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>age</param-name>
+		<param-value>20</param-value>
+	</context-param>
+
+</web-app>
